@@ -4,12 +4,11 @@
 
   // Basic config – replace these when you have real addresses/links
   const CONFIG = {
-    contract: $('#contractAddress')?.dataset.address || '0x000000000000000000000000000000000000RER0',
-    dexscreener: 'https://dexscreener.com/bsc',
+    contract: $('#contractAddress')?.dataset.address || '0x82cab245d74fdaffe3a010ee6c7f31241e304444',
+    dexscreener: 'https://dexscreener.com/bsc/0x82cab245d74fdaffe3a010ee6c7f31241e304444',
     dextools: 'https://www.dextools.io/app/en/bnb',
     trade: 'https://pancakeswap.finance/swap',
     x: 'https://x.com/yellowtrollbsc',
-    telegram: 'https://t.me/yellowtrollbsc',
   };
 
   // Wire external links
@@ -19,7 +18,6 @@
     ['#tradeLink', CONFIG.trade],
     ['#xLink', CONFIG.x],
     ['#xHeroLink', CONFIG.x],
-    ['#telegramLink', CONFIG.telegram],
     ['#bscscanLink', `https://bscscan.com/token/${CONFIG.contract}`],
   ];
   linkMap.forEach(([id, href]) => { const el = $(id); if (el && href) el.href = href; });
